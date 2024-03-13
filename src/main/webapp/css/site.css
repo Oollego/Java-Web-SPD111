@@ -1,0 +1,30 @@
+.flex1{
+    flex: 1 !important;
+}
+.flex3{
+    flex: 3 !important;
+}
+.saleImg{
+    width: 60px;
+}
+.prop_img{
+height: 100%;
+width: auto !important;
+    max-height: 300px;
+}
+.text_cross{
+    text-decoration: line-through;
+}
+.mar_but_10{
+    margin-bottom: 10px!important;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   width: 100%;
+    }
+.card-image{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
