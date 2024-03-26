@@ -1,5 +1,6 @@
 package step.learning.servlets;
 
+import com.google.inject.Singleton;
 import step.learning.dal.dao.PropDao;
 
 import javax.servlet.ServletException;
@@ -10,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import step.learning.dal.dao.PropDao;
 
-@WebServlet("/prop")
+@Singleton
 public class PropServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

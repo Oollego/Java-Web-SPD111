@@ -8,6 +8,7 @@
 
     String context = request.getContextPath() ;
 %>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Title</title>
@@ -22,11 +23,12 @@
 <header>
     <nav>
         <div class="nav-wrapper green darken-2">
-            <a href="<%= context%>/" class="brand-logo">Logo</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a href="<%= context%>/" class="brand-logo left">Logo</a>
+            <ul id="nav-mobile" class="right">
                 <li><a href="<%= context%>/cart"><i class="material-icons prefix">shopping_cart</i></a></li>
                 <li><a href="<%= context%>/prop"><img class="saleImg" src="<%=context%>/img/sale.png" alt="sale"></a></li>
-                <li><a href="collapsible.html">JavaScript</a></li>
+                <li><a href="<%= context%>/signup"><i class="material-icons">person_add</i></a></li>
+                <li><a href="<%= context%>/item"><i class="material-icons">note_add</i></a></li>
             </ul>
         </div>
     </nav>
@@ -66,5 +68,6 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="<%=context%>/js/site.js"></script>
+    <script src="<%=context%>/js/newItem.js"></script>
 </body>
 </html>

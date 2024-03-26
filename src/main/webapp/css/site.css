@@ -28,3 +28,49 @@ width: auto !important;
     display: flex;
     justify-content: center;
 }
+
+
+/*itemAdd*/
+.item_img{
+    width: 100%;
+    border: dimgrey 1px inset;
+    margin-top: 50px;
+ }
+
+.img-box{
+    display: flex;
+    width: 100%;
+    max-height: fit-content;
+    height: 60px;
+    margin-top: 1px;
+    margin-bottom: 15px;
+}
+.img-box img{
+    height: 100%;
+
+}
+.img-box img:hover{
+    height: 100%;
+    border: dodgerblue 1px inset;
+}
+.img-box_select {
+    border: coral 2px inset;
+}
+.desc_text{
+    text-align: justify;
+    min-height: 200px;
+}
+.inputPadNull{
+    padding: 0 !important;
+}
+
+
+/*.div-preview{*/
+/*    width: 100%;*/
+
+/*}*/
+/*.div-preview img{*/
+/*    padding: 2px !important;*/
+
+
+/*}*/
