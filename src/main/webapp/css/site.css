@@ -64,7 +64,14 @@ width: auto !important;
     padding: 0 !important;
 }
 
+.signAlertDiv{
+    height: 50px;
+    text-align: center;
+}
 
+.signAlertDiv span{
+    line-height: 50px;
+}
 /*.div-preview{*/
 /*    width: 100%;*/
 

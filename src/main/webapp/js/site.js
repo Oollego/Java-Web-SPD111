@@ -85,13 +85,29 @@ function signupButtonClick(e) {
     fetch( window.location.href, { method: 'POST', body: formData } )
         .then( r => r.json() )
         .then( j => {
-            console.log(j);
-            // if( j.status == 1 ) {  // реєстрація успішна
-            //     alert( 'реєстрація успішна' ) ;
-            //     window.location = '/' ;  // переходимо на головну сторінку
-            // }
-            // else {  // помилка реєстрації (повідомлення - у полі message)
-            //     alert( j.data.message ) ;
-            // }
+            if( j.meta.status === "success" ) {  // реєстрація успішна
+                alert( 'Реєстрація успішна' ) ;
+                window.location = '/' + window.location.pathname.split('/')[1] ;  // переходимо на головну сторінку
+            }
+            else {  // помилка реєстрації (повідомлення - у полі message)
+                signupAlert(signupForm, j.meta.message ) ;
+                passwordInput.value = "";
+                repeatInput.value = "";
+            }
         } ) ;
+}
+
+function signupAlert(signupForm, message){
+
+    let errorDiv = document.querySelector('.signAlertDiv');
+    if(errorDiv) { console.log(errorDiv); return; }
+
+    let mainDiv = signupForm.parentElement;
+    let alertDiv = document.createElement("div");
+    alertDiv.classList.add("row","signAlertDiv", "red", "lighten-4");
+    let alertSpan = document.createElement("span");
+    alertSpan.innerText = message;
+    alertDiv.append(alertSpan);
+    mainDiv.prepend(alertDiv);
+
 }

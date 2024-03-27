@@ -102,7 +102,7 @@ public class SignupServlet extends HttpServlet {
         }
 
         if(userDao.registerUser(user)){
-            sendRest(resp, "sucess", "User registered", user.getId().toString());
+            sendRest(resp, "success", "User registered", user.getId().toString());
         }else{
             sendRest( resp, "error", "Internal error, look at server's logs", null);
         }
