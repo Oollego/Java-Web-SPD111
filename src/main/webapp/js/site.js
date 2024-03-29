@@ -6,7 +6,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
     const authButton = document.getElementById("auth-button");
     if(authButton) { authButton.onclick = authButtonClick; }
     // налаштування модальних вікон
-    var elems = document.querySelectorAll('.modal');
+    let elems = document.querySelectorAll('.modal');
     M.Modal.init(elems, {
         "opacity": 	    	0.5, 	// Opacity of the modal overlay.
         "inDuration": 		250, 	// Transition in duration in milliseconds.
@@ -24,7 +24,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 });
 
-function authButtonClick(e) {
+function authButtonClick() {
     const emailInput = document.querySelector('input[name="auth-email"]');
     if( ! emailInput ) { throw "'auth-email' not found" ; }
     const passwordInput = document.querySelector('input[name="auth-password"]');
@@ -59,7 +59,7 @@ function signupButtonClick(e) {
     /// Валідація даних
     let isFormValid = true ;
 
-    if( nameInput.value == "" ) {
+    if( nameInput.value === "" ) {
         nameInput.classList.remove("valid");
         nameInput.classList.add("invalid");
         isFormValid = false ;

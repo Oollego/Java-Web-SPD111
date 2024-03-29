@@ -9,11 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a85af046-32b3-43ab-ba5f-21d96337b3c2" name="Changes" comment="Week3">
+    <list default="true" id="a85af046-32b3-43ab-ba5f-21d96337b3c2" name="Changes" comment="SignUp added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/servlets/SignupServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/servlets/SignupServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/newItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/newItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/site.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +199,7 @@
       <workItem from="1710365611178" duration="6475000" />
       <workItem from="1710501717487" duration="1586000" />
       <workItem from="1710589126538" duration="13253000" />
-      <workItem from="1710939351655" duration="83956000" />
+      <workItem from="1710939351655" duration="84535000" />
     </task>
     <task id="LOCAL-00001" summary="Week2">
       <option name="closed" value="true" />
@@ -220,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711465486898</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="SignUp added">
+      <option name="closed" value="true" />
+      <created>1711578963426</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711578963426</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +245,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Week2" />
     <MESSAGE value="Week3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Week3" />
+    <MESSAGE value="SignUp added" />
+    <option name="LAST_COMMIT_MESSAGE" value="SignUp added" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Java_Web_SPD111$Tomcat_8_5_96.ic" NAME="Tomcat 8.5.96 Coverage Results" MODIFIED="1710366241304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
