@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", ()=>{
 
     let inputImg = document.getElementById("image_uploads");
-    if(!inputImg) console.error('#inputImg not found - ignored');
-    inputImg.style.opacity = 0;
-    inputImg.addEventListener("change", updateImageDisplay);
+    if(!inputImg) {
+        inputImg.style.opacity = 0;
+        inputImg.addEventListener("change", updateImageDisplay);
+    }
+
    //var preview = document.querySelector(".preview");
 
     let addFeatureBtn = document.getElementById("addFeatureBtn");

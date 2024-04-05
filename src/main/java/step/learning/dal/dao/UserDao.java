@@ -5,10 +5,11 @@ import com.google.inject.Singleton;
 import step.learning.dal.dto.User;
 import step.learning.services.db.DbService;
 
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.UUID;
+
 
 @Singleton
 public class UserDao {
@@ -19,6 +20,84 @@ public class UserDao {
         this.dbService = dbService;
     }
 
+    public User getUserByToken ( String token){
+        String sql = "SELECT t.*, u.* FROM Tokens t JOIN Users u ON t.user_id = u.user_id " +
+                "WHERE t.token_id = ? LIMIT 1" ;
+//        AND t.token_expires > CURRENT_TIMESTAMP " +
+
+        try(PreparedStatement prep = dbService.getConnection().prepareStatement( sql )) {
+            prep.setString(1, token);
+            ResultSet res = prep.executeQuery() ;
+            if( res.next() ){
+                Timestamp expTokenDate = res.getTimestamp("token_expires");
+                Timestamp curDate = new Timestamp( new java.util.Date().getTime() );
+                if (expTokenDate.before(curDate)){
+                    tokenExpDateChanger(res.getString("token_id"));
+                    return getUserByToken ( token ) ;
+                }
+
+                return User.fromResultSet( res ) ;
+            }
+        }
+        catch(SQLException ex){
+            System.err.println( ex.getMessage());
+            System.out.println( sql );
+
+        }
+        return null;
+    }
+
+    private void tokenExpDateChanger( String token_id ) {
+
+        String sqlTokenDateMod = "UPDATE Tokens as t SET t.token_expires = ? WHERE t.token_id = ?" ;
+
+        Timestamp timestamp = new Timestamp( new java.util.Date().getTime() + 30 * 5 * 1000) ;
+
+        try(PreparedStatement prepUpdate = dbService.getConnection().prepareStatement( sqlTokenDateMod )){
+            prepUpdate.setTimestamp(1, timestamp);
+            prepUpdate.setString(2, token_id);
+            prepUpdate.executeUpdate();
+        }catch(SQLException ex){
+            System.err.println( ex.getMessage());
+            System.out.println( sqlTokenDateMod );
+        }
+
+    }
+    public String generateToken (User user) {
+        String sql = "INSERT INTO Tokens( token_id, user_id, token_expires) VALUES(?,?,?);";
+
+        try (PreparedStatement prep = dbService.getConnection().prepareStatement( sql )) {
+
+            String token = UUID.randomUUID().toString();
+            prep.setString(1, token );
+            prep.setString(2, user.getId().toString() );
+            prep.setTimestamp(3, new Timestamp( new java.util.Date().getTime() + 60 * 5 * 1000) );
+            prep.executeUpdate();
+            return token;
+
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+            System.out.println(sql);
+
+        }
+        return null;
+    }
+    public User getUserByEmail( String email ){
+        String sql = "SELECT u.* FROM Users u WHERE u.user_email = ?";
+        try(PreparedStatement prep = dbService.getConnection().prepareStatement( sql )) {
+            prep.setString(1, email);
+            ResultSet res = prep.executeQuery() ;
+            if( res.next() ){
+                return User.fromResultSet( res ) ;
+            }
+        }
+        catch(SQLException ex){
+            System.err.println( ex.getMessage());
+            System.out.println( sql );
+
+        }
+        return null;
+    }
     public boolean registerUser ( User user ){
         if( user == null ) return false;
         if( user.getId() == null ) user.setId(UUID.randomUUID() );

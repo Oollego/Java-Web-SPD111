@@ -9,8 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a85af046-32b3-43ab-ba5f-21d96337b3c2" name="Changes" comment="SignUp added">
+    <list default="true" id="a85af046-32b3-43ab-ba5f-21d96337b3c2" name="Changes" comment="SignUp added_v2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/step/learning/servlets/AuthServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/Java_Logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/dal/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/dal/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/dal/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/dal/dto/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/ioc/RouterModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/ioc/RouterModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/_layout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/_layout.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/newItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/newItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/site.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +72,7 @@
     "Tomcat Server.Tomcat 8.5.96.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Dasha/Desktop/Share/Java/Java-Web-SPD111/src/main/webapp/img",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -84,6 +92,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dasha\Desktop\Share\Java\Java-Web-SPD111\src\main\webapp\img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Dasha\Desktop\Share\Java\Java-Web-SPD111\src\main\webapp" />
       <recent name="C:\Users\Dasha\Desktop\Share\Java\Java-Web-SPD111\src\main\webapp\img\avatar" />
@@ -200,6 +211,10 @@
       <workItem from="1710501717487" duration="1586000" />
       <workItem from="1710589126538" duration="13253000" />
       <workItem from="1710939351655" duration="84535000" />
+      <workItem from="1711712128349" duration="862000" />
+      <workItem from="1711798450679" duration="14406000" />
+      <workItem from="1712146085845" duration="977000" />
+      <workItem from="1712319708040" duration="12344000" />
     </task>
     <task id="LOCAL-00001" summary="Week2">
       <option name="closed" value="true" />
@@ -225,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711578963426</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="SignUp added_v2">
+      <option name="closed" value="true" />
+      <created>1711712370015</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711712370015</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +269,19 @@
     <MESSAGE value="Week2" />
     <MESSAGE value="Week3" />
     <MESSAGE value="SignUp added" />
-    <option name="LAST_COMMIT_MESSAGE" value="SignUp added" />
+    <MESSAGE value="SignUp added_v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="SignUp added_v2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/step/learning/dal/dao/UserDao.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Java_Web_SPD111$Tomcat_8_5_96.ic" NAME="Tomcat 8.5.96 Coverage Results" MODIFIED="1710366241304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
