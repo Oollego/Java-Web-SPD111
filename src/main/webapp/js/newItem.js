@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     let inputImg = document.getElementById("image_uploads");
     if(!inputImg) {
-        inputImg.style.opacity = 0;
+        inputImg.style.opacity = "0";
         inputImg.addEventListener("change", updateImageDisplay);
     }
 

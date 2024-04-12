@@ -30,7 +30,7 @@
                 <li><a href="<%= context%>/prop"><img class="saleImg" src="<%=context%>/img/sale.png" alt="sale"></a></li>
                 <li><a href="<%= context%>/signup"><i class="material-icons">person_add</i></a></li>
                 <li><a href="<%= context%>/item"><i class="material-icons">note_add</i></a></li>
-                <li><a href="#auth-modal" class="modal-trigger"><i class="material-icons">key</i></a></li><!-- Modal Trigger -->
+                <li data-auth="avatar"><a href="#auth-modal" class="modal-trigger"><i class="material-icons">key</i></a></li><!-- Modal Trigger -->
 
             </ul>
         </div>

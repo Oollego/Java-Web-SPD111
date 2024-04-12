@@ -56,9 +56,112 @@ function checkAuth(){
             method: 'POST'
         })
             .then( r => r.json() )
-            .then( console.log )
+            .then( j => {
+                if(j.meta.status == 'success'){
+                    document.querySelector('[data-auth = "avatar"]')
+                        .innerHTML = `<img class="nav-avatar" src="/${getContext()}/img/avatar/${j.data.avatar}"/>`
+                    const product = document.querySelector('[data-auth="product"]');
+                    if(product){
+                        fetch(`/${getContext()}/product.jsp`)
+                            .then(r=> r.text())
+                            .then( t => {
+                                product.innerHTML = t;
+                                document.getElementById("add-product-button")
+                                    .addEventListener('click', addProductClick);
+                            });
+                    }
+                }
+            } ) ;
     }
 }
+function addProductClick(e){
+    const form = e.target.closest('form');
+    const name = form.querySelector("#product-name").value.trim();
+    const price = Number(form.querySelector("#product-price").value);
+    const description = form.querySelector("#product-description").value.trim();
+    const fileInput = form.querySelector("#product-img");
+
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("price", price);
+    formData.append("description", description);
+    formData.append("image", fileInput.files[0]);
+    formData.append("token", localStorage.getItem("auth-token"));
+
+    const authToken = localStorage.getItem("auth-token");
+try {
+    fetch(`/${getContext()}/shop-api?token=${authToken}`, {
+        method: 'POST',
+        body: formData
+    })
+        .then(r => r.json())
+        .then(j => {
+            console.log(j);
+            console.log(j.meta);
+            if(j.meta.messageTarget === "403"){
+                form.parentElement.innerHTML = `<h1>${j.meta.message}</h1>`;
+            }
+            if (j.meta.status === "error") {
+                ErrorMessageHandler(j.meta.messageTarget, j.meta.message, form);
+            }
+        });
+}catch(error){
+    console.log(error);
+}
+}
+
+function ErrorMessageHandler( messageTarget, message, form ){
+
+    const nameInput = form.querySelector("#product-name");
+    const priceInput = form.querySelector("#product-price");
+    const descrInput = form.querySelector("#product-description");
+    const fileInput = document.getElementById("product-img-path");
+
+
+    switch(messageTarget){
+        case "name":
+            InputElemInvalid(nameInput, message);
+            InputElemValid(priceInput);
+            InputElemValid(descrInput);
+            InputElemValid(fileInput);
+            break;
+        case "description":
+            InputElemInvalid(descrInput, message);
+            InputElemValid(priceInput);
+            InputElemValid(nameInput);
+            InputElemValid(fileInput);
+            break;
+        case "price":
+            InputElemInvalid(priceInput, message);
+            InputElemValid(descrInput);
+            InputElemValid(nameInput);
+            InputElemValid(fileInput);
+            break;
+        case "file":
+            fileInput.classList.remove("validate");
+            fileInput.classList.add("invalid");
+            fileInput.nextElementSibling.dataset.error = message;
+            InputElemValid(descrInput);
+            InputElemValid(nameInput);
+            InputElemValid(priceInput);
+            break;
+    }
+
+}
+
+function InputElemInvalid(InputElem, message){
+    InputElem.classList.remove("validate");
+    InputElem.classList.add("invalid");
+    InputElem.nextElementSibling.nextElementSibling.dataset.error = message;
+    console.dir(InputElem.nextElementSibling.nextElementSibling);
+}
+
+function InputElemValid(InputElem){
+    InputElem.classList.add("validate");
+    InputElem.classList.remove("invalid");
+
+}
+
 
 function signupButtonClick(e) {
     // шукаємо форму - батьківській елемент кнопки (e.target)

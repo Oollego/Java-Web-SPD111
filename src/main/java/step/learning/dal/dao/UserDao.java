@@ -20,6 +20,28 @@ public class UserDao {
         this.dbService = dbService;
     }
 
+    public boolean isTokenValid(String token){
+        if (token != null) {
+            String sql = "SELECT tokens.* FROM tokens WHERE tokens.token_id = ?;";
+            try (PreparedStatement prep = dbService.getConnection().prepareStatement(sql)) {
+                prep.setString(1, token);
+                ResultSet res = prep.executeQuery();
+                if (res.next()) {
+                    Timestamp expTokenDate = res.getTimestamp("token_expires");
+                    Timestamp curDate = new Timestamp(new java.util.Date().getTime());
+                    if (curDate.before(expTokenDate)) {
+                        return true;
+                    }
+                }
+            } catch (SQLException ex) {
+                System.err.println(ex.getMessage());
+                System.out.println(sql);
+
+            }
+        }
+        return false;
+    }
+
     public User getUserByToken ( String token){
         String sql = "SELECT t.*, u.* FROM Tokens t JOIN Users u ON t.user_id = u.user_id " +
                 "WHERE t.token_id = ? LIMIT 1" ;
@@ -35,7 +57,6 @@ public class UserDao {
                     tokenExpDateChanger(res.getString("token_id"));
                     return getUserByToken ( token ) ;
                 }
-
                 return User.fromResultSet( res ) ;
             }
         }

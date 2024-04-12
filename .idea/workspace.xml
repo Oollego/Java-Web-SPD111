@@ -9,14 +9,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a85af046-32b3-43ab-ba5f-21d96337b3c2" name="Changes" comment="SignUp added_v2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/step/learning/servlets/AuthServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/img/Java_Logo.png" afterDir="false" />
+    <list default="true" id="a85af046-32b3-43ab-ba5f-21d96337b3c2" name="Changes" comment="Token Homework">
+      <change afterPath="$PROJECT_DIR$/src/main/java/step/learning/filtres/CharsetFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/step/learning/servlets/ShopApiServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/step/learning/servlets/ShopServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/shop.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/product.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/dal/dao/PropDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/dal/dao/ProductDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/dal/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/dal/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/dal/dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/dal/dto/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/dal/dto/PropItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/dal/dto/ProductItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/ioc/RouterModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/ioc/RouterModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/servlets/PropServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/servlets/PropServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/_layout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/_layout.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/item.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/item.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/prop.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/no_image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/img/products/no_image.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/newItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/newItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/site.js" afterDir="false" />
     </list>
@@ -30,8 +41,8 @@
       <list>
         <option value="CSS File" />
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="JavaScript File" />
+        <option value="Jsp File" />
         <option value="Class" />
       </list>
     </option>
@@ -50,7 +61,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -72,7 +83,7 @@
     "Tomcat Server.Tomcat 8.5.96.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Dasha/Desktop/Share/Java/Java-Web-SPD111/src/main/webapp/img",
+    "last_opened_file_path": "C:/Users/Dasha/Desktop/Share/Java/Java-Web-SPD111/src/main/webapp",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -93,9 +104,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dasha\Desktop\Share\Java\Java-Web-SPD111\src\main\webapp" />
       <recent name="C:\Users\Dasha\Desktop\Share\Java\Java-Web-SPD111\src\main\webapp\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dasha\Desktop\Share\Java\Java-Web-SPD111\src\main\webapp\img\products" />
       <recent name="C:\Users\Dasha\Desktop\Share\Java\Java-Web-SPD111\src\main\webapp" />
       <recent name="C:\Users\Dasha\Desktop\Share\Java\Java-Web-SPD111\src\main\webapp\img\avatar" />
       <recent name="C:\Users\Dasha\Desktop\Share\Java\Java-Web-SPD111\src\main\webapp\img" />
@@ -214,7 +227,9 @@
       <workItem from="1711712128349" duration="862000" />
       <workItem from="1711798450679" duration="14406000" />
       <workItem from="1712146085845" duration="977000" />
-      <workItem from="1712319708040" duration="12344000" />
+      <workItem from="1712319708040" duration="13590000" />
+      <workItem from="1712400745828" duration="13888000" />
+      <workItem from="1712768040035" duration="32819000" />
     </task>
     <task id="LOCAL-00001" summary="Week2">
       <option name="closed" value="true" />
@@ -248,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711712370015</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Token Homework">
+      <option name="closed" value="true" />
+      <created>1712345314674</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712345314674</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,18 +293,8 @@
     <MESSAGE value="Week3" />
     <MESSAGE value="SignUp added" />
     <MESSAGE value="SignUp added_v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="SignUp added_v2" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/step/learning/dal/dao/UserDao.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Token Homework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Token Homework" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Java_Web_SPD111$Tomcat_8_5_96.ic" NAME="Tomcat 8.5.96 Coverage Results" MODIFIED="1710366241304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -1,14 +1,17 @@
 package step.learning.dal.dto;
 
 import java.util.UUID;
-public class PropItem {
+public class ProductItem {
     private UUID id;
+    private String name;
     private String description;
     private String imgPath;
-    private String price;
-    private String propPrice;
+    private double price;
+    private double propPrice;
 
-    public PropItem(UUID id, String description, String imgPath, String price, String propPrice) {
+    public ProductItem(){}
+
+    public ProductItem(UUID id, String description, String imgPath, int price, int propPrice) {
         this.id = id;
         this.description = description;
         this.imgPath = imgPath;
@@ -31,6 +34,14 @@ public class PropItem {
         this.description = description;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getImgPath() {
         return imgPath;
     }
@@ -39,19 +50,19 @@ public class PropItem {
         this.imgPath = imgPath;
     }
 
-    public String getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public String getPropPrice() {
+    public double getPropPrice() {
         return propPrice;
     }
 
-    public void setPropPrice(String propPrice) {
+    public void setPropPrice(double propPrice) {
         this.propPrice = propPrice;
     }
 

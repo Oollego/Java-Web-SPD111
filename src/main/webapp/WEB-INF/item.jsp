@@ -10,11 +10,11 @@
     <div class="col s6">
         <form>
             <div class="col s12 ">
-                <img id="boardImg" class="item_img" src="<%=context%>/img/no_image.jpg" alt="item_img">
+                <img id="boardImg" class="item_img" src="<%=context%>/img/products/no_image.jpg" alt="item_img">
             </div>
             <div class="col s12">
                 <div class="img-box">
-                    <img src="<%=context%>/img/no_image.jpg" alt="no_image.jpg">
+                    <img src="<%=context%>/img/products/no_image.jpg" alt="no_image.jpg">
                 </div>
             </div>
             <div>

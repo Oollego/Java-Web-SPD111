@@ -11,7 +11,7 @@
 <div class="col s12 m7">
     <div class="card horizontal">
         <div class="card-image flex1">
-            <img src="<%=context%>/img/no_image.jpg" alt="img" />
+            <img src="<%=context%>/img/products/no_image.jpg" alt="img" />
         </div>
         <div class="card-stacked flex3">
             <div class="card-content">
