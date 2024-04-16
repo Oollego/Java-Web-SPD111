@@ -1,5 +1,7 @@
 package step.learning.dal.dto;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.UUID;
 public class ProductItem {
     private UUID id;
@@ -11,12 +13,24 @@ public class ProductItem {
 
     public ProductItem(){}
 
-    public ProductItem(UUID id, String description, String imgPath, int price, int propPrice) {
+    public ProductItem(ResultSet resultSet) throws SQLException {
+        this(
+                UUID.fromString( resultSet.getString("product_id")),
+                resultSet.getString("product_name"),
+                resultSet.getString("product_description"),
+                resultSet.getString("product_image"),
+                resultSet.getDouble("product_price")
+
+
+        );
+    }
+    public ProductItem(UUID id, String name, String description, String imgPath, Double price) {
         this.id = id;
+        this.name = name;
         this.description = description;
         this.imgPath = imgPath;
         this.price = price;
-        this.propPrice = propPrice;
+
     }
     public UUID getId() {
         return id;

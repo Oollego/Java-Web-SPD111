@@ -23,7 +23,21 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
     checkAuth();
 
+
 });
+
+function serveCartButtons(){
+    const userId = document.querySelector('[data-user-id]').getAttribute('data-user-id');
+    for(let btn of document.querySelectorAll('[data-product]')){
+        btn.onclick = () =>{
+
+            let productId = btn.getAttribute('data-product')
+            fetch(`/${getContext()}/shop-api?user-id=${userId}&product-id=${productId}`, {
+                method: 'PUT'
+            }).then(r=>r.json()).then(console.log);
+        }
+    }
+}
 
 function getContext(){
     return window.location.pathname.split('/')[1];
@@ -59,7 +73,7 @@ function checkAuth(){
             .then( j => {
                 if(j.meta.status == 'success'){
                     document.querySelector('[data-auth = "avatar"]')
-                        .innerHTML = `<img class="nav-avatar" src="/${getContext()}/img/avatar/${j.data.avatar}"/>`
+                        .innerHTML = `<img data-user-id="${j.data.id}" class="nav-avatar" src="/${getContext()}/img/avatar/${j.data.avatar}"/>`
                     const product = document.querySelector('[data-auth="product"]');
                     if(product){
                         fetch(`/${getContext()}/product.jsp`)
@@ -70,6 +84,7 @@ function checkAuth(){
                                     .addEventListener('click', addProductClick);
                             });
                     }
+                    serveCartButtons();
                 }
             } ) ;
     }

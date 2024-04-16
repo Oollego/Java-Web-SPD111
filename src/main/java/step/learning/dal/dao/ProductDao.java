@@ -5,7 +5,11 @@ import step.learning.dal.dto.ProductItem;
 import step.learning.services.db.DbService;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class ProductDao {
@@ -39,29 +43,48 @@ public class ProductDao {
             return false ;
         }
     }
+    public List<ProductItem> getList(int skip, int take){
+            String sql = String.format("SELECT * FROM Products LIMIT %d, %d", skip, take);
+
+            List<ProductItem> result = new ArrayList<>();
+
+            try( Statement statement = dbService.getConnection().createStatement()){
+                ResultSet resultSet = statement.executeQuery(sql);
+                while(resultSet.next()){
+                    result.add( new ProductItem(resultSet) ) ;
+                }
+            }
+            catch (SQLException ex) {
+                System.err.println( ex.getMessage() );
+                System.out.println( sql );
+
+            }
+            return result;
+    }
 
     public ProductItem[] GetPropItems(){
         ProductItem PropItem1 = new ProductItem(
                 UUID.randomUUID(),
                 "УМБ XO Power Bank 20000mAh PR183 Light",
                 "336305793.webp",
-                3000,
-                2999
+                "image",
+                3000.0
+
                 );
 
         ProductItem PropItem2 = new ProductItem(
                 UUID.randomUUID(),
                 "Фітнес-браслет Xiaomi Smart Band 8 Black",
                 "367323203.webp",
-                5000,
-                4000
+                "image",
+                5000.0
         );
         ProductItem PropItem3 = new ProductItem(
                 UUID.randomUUID(),
                 "Смарт-годинник Huawei Watch GT3 42",
                 "368324204.png",
-                6000,
-                5000
+                "image",
+                4000.0
         );
 
         return new ProductItem[]{

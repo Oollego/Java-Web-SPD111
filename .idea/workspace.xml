@@ -9,26 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a85af046-32b3-43ab-ba5f-21d96337b3c2" name="Changes" comment="Token Homework">
-      <change afterPath="$PROJECT_DIR$/src/main/java/step/learning/filtres/CharsetFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/step/learning/servlets/ShopApiServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/step/learning/servlets/ShopServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/shop.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/product.jsp" afterDir="false" />
+    <list default="true" id="a85af046-32b3-43ab-ba5f-21d96337b3c2" name="Changes" comment=" Item Editor Homework">
+      <change afterPath="$PROJECT_DIR$/src/main/java/step/learning/models/CartPageModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/dal/dao/PropDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/dal/dao/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/dal/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/dal/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/dal/dto/PropItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/dal/dto/ProductItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/ioc/RouterModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/ioc/RouterModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/servlets/PropServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/servlets/PropServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/dal/dao/CartDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/dal/dao/CartDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/dal/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/dal/dao/ProductDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/dal/dto/ProductItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/dal/dto/ProductItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/servlets/CartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/servlets/CartServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/step/learning/servlets/ShopApiServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/step/learning/servlets/ShopApiServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/_layout.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/_layout.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/item.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/item.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/prop.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/product.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/no_image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/img/products/no_image.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/newItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/newItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/site.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +52,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -82,6 +73,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 8.5.96.executor": "Run",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Dasha/Desktop/Share/Java/Java-Web-SPD111/src/main/webapp",
     "list.type.of.created.stylesheet": "CSS",
@@ -229,7 +221,14 @@
       <workItem from="1712146085845" duration="977000" />
       <workItem from="1712319708040" duration="13590000" />
       <workItem from="1712400745828" duration="13888000" />
-      <workItem from="1712768040035" duration="32819000" />
+      <workItem from="1712768040035" duration="33070000" />
+      <workItem from="1713006163207" duration="11538000" />
+      <workItem from="1713018395398" duration="220000" />
+      <workItem from="1713018736931" duration="25000" />
+      <workItem from="1713018912066" duration="128000" />
+      <workItem from="1713019141009" duration="328000" />
+      <workItem from="1713019636603" duration="1043000" />
+      <workItem from="1713261110258" duration="3563000" />
     </task>
     <task id="LOCAL-00001" summary="Week2">
       <option name="closed" value="true" />
@@ -271,7 +270,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712345314674</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary=" Item Editor Homework">
+      <option name="closed" value="true" />
+      <created>1712921677459</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712921677459</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +301,8 @@
     <MESSAGE value="SignUp added" />
     <MESSAGE value="SignUp added_v2" />
     <MESSAGE value="Token Homework" />
-    <option name="LAST_COMMIT_MESSAGE" value="Token Homework" />
+    <MESSAGE value=" Item Editor Homework" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Item Editor Homework" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Java_Web_SPD111$Tomcat_8_5_96.ic" NAME="Tomcat 8.5.96 Coverage Results" MODIFIED="1710366241304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
